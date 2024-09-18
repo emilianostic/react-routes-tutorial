@@ -1,4 +1,4 @@
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link, Outlet } from "react-router-dom";
 
 function Dashboard() {
   const navigate = useNavigate();
@@ -9,7 +9,10 @@ function Dashboard() {
   return (
     <div>
       <h1>Dashboard</h1>
+      <Outlet />
+
       <button onClick={handleClick}>Logout</button>
+      <Link to="welcome">say welcome</Link>
     </div>
   );
 }

@@ -19,7 +19,9 @@ function App() {
         <Route path="/users" element={<Users/>} />
         <Route path="/usuarios" element={<Navigate to="/users"/>} />
         <Route path="/users/:id" element={<User/>} />
-        <Route path="/dashboard" element={<Dashboard/>} />
+        <Route path="/dashboard/*" element={<Dashboard/>} >
+        <Route path="welcome" element={<p>welcome!!!!</p>}/>{/* //subruta */}
+        </Route>
         <Route path="*" element={<NotFound/>} />
       </Routes>
     </BrowserRouter>
